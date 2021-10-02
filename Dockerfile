@@ -1,6 +1,7 @@
 FROM node:alpine AS builder
 
 WORKDIR "/app"
+ENV CI=true
 COPY package.json .
 RUN npm install
 COPY . .
