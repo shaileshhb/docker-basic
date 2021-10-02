@@ -6,4 +6,4 @@ before_install:
   - docker build -t shaileshb02/docker-basic -f Dockerfile.dev .
 
 script:
-  - docker run shaileshb02/docker-basic npm run test -- --coverage
+  - docker run -e CI=true shaileshb02/docker-basic npm run test
